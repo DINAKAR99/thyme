@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>conditonal statements using thymeleaf</h1>
+    <h2 th:if="${gender}=='m'">MALE</h2>
+
+    <h1>user is <span th:text="${isActive}?'aCTIVE':'NOT ACTIVE'"> </span></h1>
+
+    <div th:switch="${#lists.size(list)}">
+      <h1 th:case="0">list contain zero elem</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>|| ITS A THYME LEAF PAGE ||</h1>
+    <h1>THE NAME IS <span th:text="${#strings.toUpperCase(name)}"></span></h1>
+    <h1 th:text="${date}">THE NAME IS</h1>
+    <h1>
+      <div th:with="a=5,b=7,n=${name}">
+        <span th:text="${a}"> val of a is </span>
+        <h1 th:text=" 'sum of'+ ${a}+ 'b is'+ ${b} +'is =='+${a+b}"></h1>
+      </div>
+    </h1>
+  </body>
+</html>
